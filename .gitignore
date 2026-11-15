@@ -1,0 +1,29 @@
+# build
+build/
+bin/
+*.o
+*.a
+*.so
+*.out
+*.exe
+bench_*
+benchmark_*
+
+# local results and videos
+*.avi
+*.mp4
+*.mov
+**/frames.csv
+out/
+results_local/
+results_temp/
+output/
+
+# editors
+.vscode/
+.idea/
+__pycache__/
+.DS_Store
+*.swp
+
+*.zip
