@@ -3,7 +3,13 @@
 // (pad_bytes added to the row stride), runs one filter many times and saves the times.
 //
 // Usage: cache_probe sobel|median n input.png warmup measured pad_bytes output.csv [--no-validate]
+//
+// Built with -DCACHEGRIND_SCOPE, Cachegrind only counts the filter calls (warm-up + measured),
+// not the image loading. Run it with valgrind --tool=cachegrind --instr-at-start=no.
 #include "my_functions.hpp"
+#ifdef CACHEGRIND_SCOPE
+#include <valgrind/cachegrind.h>
+#endif
 #include <opencv2/opencv.hpp>
 #include <algorithm>
 #include <cmath>
@@ -85,6 +91,9 @@ int main(int argc, char** argv) {
                   << " in.contiguous=" << in.isContinuous() << " out.contiguous=" << out.isContinuous() << "\n";
         std::cout << "CLOCK_MONOTONIC resolution=" << resolution.tv_sec << "s+" << resolution.tv_nsec << "ns\n";
 
+#ifdef CACHEGRIND_SCOPE
+        CACHEGRIND_START_INSTRUMENTATION;
+#endif
         for (int i = 0; i < warm; ++i) run();
 
         std::vector<double> values;
@@ -94,6 +103,9 @@ int main(int argc, char** argv) {
             run();
             values.push_back(now_ms() - t0);
         }
+#ifdef CACHEGRIND_SCOPE
+        CACHEGRIND_STOP_INSTRUMENTATION;
+#endif
 
         if (validate) {
             cv::Mat ref(H, W, CV_8UC1, cv::Scalar(0));

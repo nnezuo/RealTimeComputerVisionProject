@@ -1,0 +1,26 @@
+==92077== Cachegrind, a high-precision tracing profiler
+==92077== Copyright (C) 2002-2025, and GNU GPL'd, by Nicholas Nethercote et al.
+==92077== Using Valgrind-3.27.1 and LibVEX; rerun with -h for copyright info
+==92077== Command: bin/report2_band_fusion baseline 5 results/fedora/capture/VGA/input_gray.png 1 2 32 results/fedora/report2_band_fusion/cg_VGA_n5_baseline_B32.csv --no-validate
+==92077== 
+--92077-- warning: L3 cache found, using its data for the LL simulation.
+mode=baseline n=5 resolution=640x480 warmup=1 measured=2 band_height=32 threads_hint=1
+CLOCK_MONOTONIC resolution=0 s + 1 ns
+intermediate_bytes: full=307200 band_median+sobel=0 fused_ring=0
+VALIDATION SKIPPED checksum=1982237 median_ms=640.627 min_ms=165.317 max_ms=640.627 IQR_ms=475.309
+==92077== 
+==92077== I refs:        153,390,135
+==92077== I1  misses:            330
+==92077== LLi misses:            330
+==92077== I1  miss rate:        0.00%
+==92077== LLi miss rate:        0.00%
+==92077== 
+==92077== D refs:         38,358,449  (36,355,933 rd   + 2,002,516 wr)
+==92077== D1  misses:         48,865  (    19,956 rd   +    28,909 wr)
+==92077== LLd misses:         14,976  (     5,311 rd   +     9,665 wr)
+==92077== D1  miss rate:         0.1% (       0.1%     +       1.4%  )
+==92077== LLd miss rate:         0.0% (       0.0%     +       0.5%  )
+==92077== 
+==92077== LL refs:            49,195  (    20,286 rd   +    28,909 wr)
+==92077== LL misses:          15,306  (     5,641 rd   +     9,665 wr)
+==92077== LL miss rate:          0.0% (       0.0%     +       0.5%  )

@@ -1,0 +1,4 @@
+mode=band n=3 resolution=1280x720 warmup=3 measured=20 band_height=32 threads_hint=1
+CLOCK_MONOTONIC resolution=0 s + 1 ns
+intermediate_bytes: full=0 band_median+sobel=94720 fused_ring=0
+VALIDATION SKIPPED checksum=8765067 median_ms=105.619 min_ms=105.013 max_ms=108.605 IQR_ms=0.546094

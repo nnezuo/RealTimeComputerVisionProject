@@ -1,0 +1,4 @@
+mode=baseline n=5 resolution=1280x720 warmup=3 measured=20 band_height=32 threads_hint=1
+CLOCK_MONOTONIC resolution=0 s + 1 ns
+intermediate_bytes: full=921600 band_median+sobel=0 fused_ring=0
+VALIDATION SKIPPED checksum=7086265 median_ms=108.519 min_ms=108.007 max_ms=110.267 IQR_ms=1.73091

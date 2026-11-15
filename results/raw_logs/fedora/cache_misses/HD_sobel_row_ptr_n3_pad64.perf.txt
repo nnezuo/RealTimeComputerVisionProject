@@ -1,0 +1,12 @@
+# started on Sun Nov 15 07:31:11 2026
+
+
+ Performance counter stats for 'bin/cache_study_report2/row_ptr sobel 3 results/fedora/capture/HD/input_gray.png 10 110 64 results/fedora/report2_cache_misses/HD_sobel_row_ptr_n3_pad64.perf_frames.csv --no-validate' (3 runs):
+
+     2.533.615.950      cycles:u                                                                ( +-  0,48% )
+     6.694.167.129      instructions:u                                                          ( +-  0,00% )
+     2.250.421.389      L1-dcache-loads:u                                                       ( +-  0,01% )
+       263.040.392      L1-dcache-load-misses:u                                                 ( +-  0,09% )
+
+       0,674574997 +- 0,004753346 seconds time elapsed  ( +-  0,70% )
+

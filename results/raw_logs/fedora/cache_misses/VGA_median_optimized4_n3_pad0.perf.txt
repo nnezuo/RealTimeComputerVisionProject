@@ -1,0 +1,12 @@
+# started on Sun Nov 15 07:25:56 2026
+
+
+ Performance counter stats for 'bin/cache_study_report2/optimized4 median 3 results/fedora/capture/VGA/input_gray.png 10 110 0 results/fedora/report2_cache_misses/VGA_median_optimized4_n3_pad0.perf_frames.csv --no-validate' (3 runs):
+
+     4.234.858.169      cycles:u                                                                ( +-  0,77% )
+     9.447.736.790      instructions:u                                                          ( +-  0,00% )
+     2.563.377.554      L1-dcache-loads:u                                                       ( +-  0,02% )
+       260.447.672      L1-dcache-load-misses:u                                                 ( +-  0,57% )
+
+       1,096114194 +- 0,013129543 seconds time elapsed  ( +-  1,20% )
+

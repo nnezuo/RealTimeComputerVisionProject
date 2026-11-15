@@ -1,0 +1,12 @@
+# started on Sun Nov 15 07:27:01 2026
+
+
+ Performance counter stats for 'bin/cache_study_report2/column_at median 3 results/fedora/capture/HD/input_gray.png 10 110 0 results/fedora/report2_cache_misses/HD_median_column_at_n3_pad0.perf_frames.csv --no-validate' (3 runs):
+
+    26.816.758.722      cycles:u                                                                ( +-  0,21% )
+    51.554.554.773      instructions:u                                                          ( +-  0,00% )
+    17.046.638.402      L1-dcache-loads:u                                                       ( +-  0,10% )
+       261.757.451      L1-dcache-load-misses:u                                                 ( +-  0,27% )
+
+       6,616179301 +- 0,024805596 seconds time elapsed  ( +-  0,37% )
+

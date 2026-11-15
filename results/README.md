@@ -88,28 +88,85 @@ not reproduce the speed of the Cortex-A78AE (`raw_logs/qemu_arm64/`).
 From n = 3 to n = 11 the opt4 median only gets about 2 times slower, while the window
 is 13 times bigger.
 
-## Extra: memory access order (laptop)
+## Cache study (report 2)
 
-We also compared different ways of reading the image in the Sobel with `cache_probe`
-(one fixed image, 110 runs after 10 warm-up runs, `-O2`, 1 thread). `pad 64` adds
-64 bytes at the end of each row. Logs in `raw_logs/fedora/cache_study/`.
+All on the laptop, one thread, `-O2`. The timings are the median of 110 calls after 10
+warm-up calls on one fixed grey frame, and every run printed `VALIDATION PASS`. The miss
+counts come from Cachegrind with the laptop caches (`--D1=32768,8,64 --LL=16777216,16,64`);
+the counted window is 3 calls, so we divide by 3. Cachegrind is a simulator, and `perf`
+counts the whole program, so the two are not directly comparable (see the report).
 
-| Variant | VGA pad 0 | VGA pad 64 | HD pad 0 | HD pad 64 |
-|---|---:|---:|---:|---:|
-| column by column, `at<>` | 1.061 | 1.101 | 3.525 | 3.357 |
-| row by row, `at<>` | 0.943 | 0.934 | 2.825 | 2.851 |
-| row by row, pointers | 0.546 | 0.552 | 1.641 | 1.666 |
-| opt4 Sobel | 0.535 | 0.536 | 1.613 | 1.558 |
+### Sobel: loop order and `at<>` vs pointers
 
-`perf stat` on the whole program (VGA Sobel, 3 repetitions, `raw_logs/fedora/perf/`):
+L1 data misses per frame of `my_sobel`, against our prediction by hand (one input and one
+output miss per pixel in column order, `2·W·H/64` in row order). Logs in
+`raw_logs/fedora/cache_misses/` (Cachegrind `.log` and `perf` `.perf.txt`) and
+`raw_logs/fedora/cache_study/` (timing). `pad 64` adds 64 bytes at the end of each row.
 
-| Variant | Instructions | Cache references | Cache misses |
-|---|---:|---:|---:|
-| column by column, `at<>` | 4 631 172 556 | 630 187 542 | 213 430 849 |
-| row by row, `at<>` | 4 704 393 527 | 416 056 929 | 74 688 232 |
-| row by row, pointers | 4 009 687 117 | 419 192 777 | 76 773 291 |
-| opt4 Sobel | 3 919 252 663 | 418 828 806 | 76 624 376 |
+| Image | Variant | Predicted | Cachegrind | Time pad 0 (ms) | Time pad 64 (ms) |
+|---|---|---:|---:|---:|---:|
+| VGA | column by column, `at<>` | 614 400 | 620 813 | 1.061 | 1.101 |
+| VGA | row by row, `at<>` | 9 600 | 9 589 | 0.943 | 0.934 |
+| VGA | row by row, pointers | 9 600 | 9 589 | 0.546 | 0.552 |
+| VGA | opt4 Sobel | 9 600 | 9 590 | 0.535 | 0.536 |
+| HD | column by column, `at<>` | 1 843 200 | 1 866 573 | 3.525 | 3.357 |
+| HD | row by row, `at<>` | 28 800 | 28 769 | 2.825 | 2.851 |
+| HD | row by row, pointers | 28 800 | 28 769 | 1.641 | 1.666 |
+| HD | opt4 Sobel | 28 800 | 28 770 | 1.613 | 1.558 |
 
-Reading column by column gives almost 3 times more cache misses. These counters are for
-the whole process, not only the filter, so they are only good for comparing the variants
-with each other.
+The loop order divides the misses by 65 but only saves 11 % (VGA) and 20 % (HD) of the
+time. The pointers don't change the misses at all and make the Sobel 1.7 times faster.
+Padding does nothing here: a column of the image (960 lines in VGA) is bigger than the
+whole 32 KiB L1 (512 lines), so these are capacity misses, not conflicts.
+
+![Sobel misses](figures/cache_sobel_misses.png)
+
+An older `perf` run with the generic `cache-references` / `cache-misses` events is in
+`raw_logs/fedora/perf/` and shows the same thing (213 M misses for the column order
+against about 75 M for the others, whole program).
+
+### Median: window size
+
+opt4 median for n = 3 to 31 (`raw_logs/fedora/median_sweep/`), and D1 misses per frame of
+`my_median` from Cachegrind.
+
+| n | VGA (ms) | VGA misses | HD (ms) | HD misses |
+|---:|---:|---:|---:|---:|
+| 3 | 4.79 | 9 605 | 16.92 | 28 805 |
+| 5 | 5.71 | 9 605 | 19.39 | 28 805 |
+| 11 | 10.98 | 9 605 | 29.18 | 28 805 |
+| 15 | 11.71 | 9 606 | 36.61 | 28 806 |
+| 27 | 19.68 | 9 606 | 59.63 | 267 173 |
+| 31 | 22.28 | 9 606 | 67.04 | 454 487 |
+
+The misses jump in HD from n = 27, when n rows of 1280 bytes no longer fit in the 32 KiB
+L1, exactly where we expected. It costs less than 1 ms (about 1 % of the time). The
+median that sorts the window has the same misses as the histogram but is 3 to 13 times
+slower: the median is limited by instructions, not by the memory.
+
+![Median sweep](figures/cache_median_sweep.png)
+
+### Bands and fused median + Sobel
+
+Whole pipeline (median then Sobel), `band_fusion_bench`. `full frame` writes the median
+image and reads it back; `bands` works on bands of B rows; `fused` keeps only 3 median
+rows. Times in ms, misses per frame from Cachegrind (2 measured calls), logs and
+`SUMMARY.csv` in `raw_logs/fedora/band_fusion/`.
+
+| Image | n | full frame | bands B=32 | fused | misses full / bands / fused |
+|---|---:|---:|---:|---:|---|
+| VGA | 3 | 5.47 | 6.35 | 6.14 | |
+| VGA | 5 | 6.39 | 7.28 | 6.66 | 24 432 / 44 982 / 14 769 |
+| HD | 3 | 18.28 | 20.89 | 19.87 | |
+| HD | 5 | 20.50 | 24.17 | 21.66 | 72 404 / 132 926 / 43 573 |
+
+The fused version removes exactly the misses of the intermediate image (2·W·H/64 per
+frame), but it runs 2 to 3 % more instructions and ends up 4 to 12 % slower. The bands
+recompute the halo rows and copy each band, so they are slower and have more misses.
+Larger bands (B = 64) get closer to the full frame.
+
+![Bands and fused](figures/cache_band_fusion.png)
+
+The same three pipelines were also checked in the QEMU ARM64 container: 20 validation runs,
+all `VALIDATION PASS` (`raw_logs/qemu_arm64/band_fusion/`). The QEMU times there are not
+meaningful for performance.
