@@ -1,0 +1,12 @@
+# started on Sun Nov 15 07:25:34 2026
+
+
+ Performance counter stats for 'bin/cache_study_report2/row_at sobel 3 results/fedora/capture/VGA/input_gray.png 10 110 0 results/fedora/report2_cache_misses/VGA_sobel_row_at_n3_pad0.perf_frames.csv --no-validate' (3 runs):
+
+     2.146.640.297      cycles:u                                                                ( +-  0,77% )
+     4.704.399.924      instructions:u                                                          ( +-  0,00% )
+     1.900.888.034      L1-dcache-loads:u                                                       ( +-  0,06% )
+       259.614.541      L1-dcache-load-misses:u                                                 ( +-  0,17% )
+
+       0,566582310 +- 0,005202449 seconds time elapsed  ( +-  0,92% )
+

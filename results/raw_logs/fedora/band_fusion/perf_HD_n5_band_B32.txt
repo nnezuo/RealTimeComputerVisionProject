@@ -1,0 +1,12 @@
+# started on Sun Nov 15 08:27:51 2026
+
+
+ Performance counter stats for 'bin/report2_band_fusion band 5 results/fedora/capture/HD/input_gray.png 10 110 32 results/fedora/report2_band_fusion/perf_HD_n5_band_B32.csv --no-validate' (3 runs):
+
+    13.636.516.046      cycles:u                                                                ( +-  0,36% )
+    37.522.539.367      instructions:u                                                          ( +-  0,00% )
+     8.489.527.853      L1-dcache-loads:u                                                       ( +-  0,02% )
+       275.605.802      L1-dcache-load-misses:u                                                 ( +-  0,59% )
+
+       3,392113778 +- 0,030314194 seconds time elapsed  ( +-  0,89% )
+

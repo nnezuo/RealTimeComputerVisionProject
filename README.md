@@ -14,7 +14,12 @@ was measured on our Fedora laptop (Ryzen 7 5825U) and checked in an Ubuntu ARM64
 running with QEMU. The QEMU times are much slower than the real board and are only used
 to compare versions, not as Jetson times.
 
-The full report is in [`reports/`](reports/Report1_DOS_REIS_SANTOS_Ana_Kesia_DE_MELLO_TEIXEIRA_Julia-1.pdf).
+There are two reports in [`reports/`](reports/):
+- [report 1](reports/Report1_DOS_REIS_SANTOS_Ana_Kesia_DE_MELLO_TEIXEIRA_Julia-1.pdf): the
+  optimization of the two filters (estimates, measurements, unrolling, threads, compiler);
+- [report 2](reports/Report2_DOS_REIS_SANTOS_Ana_Kesia_DE_MELLO_TEIXEIRA_Julia.pdf): the
+  cache study (how the filters use the cache, predicted by hand and measured with
+  Cachegrind and `perf`).
 
 ## What is in the repo
 
@@ -24,9 +29,11 @@ src/
   include/         my_functions.hpp
   optimizations/   my_functions_optimized_1.cpp ... _4.cpp
   experiments/     sobel_unrolling, median_unrolling (d = 1, 2, 4, 8), cache_study
-  benchmarks/      webcam_bench.cpp (main benchmark), cache_probe.cpp
+  benchmarks/      webcam_bench.cpp (main benchmark), cache_probe.cpp and
+                   band_fusion_bench.cpp (cache study)
+scripts/           cache_study.sh, band_fusion.sh, summarize_band_fusion.py (report 2)
 results/           summary tables, figures and the text logs of our runs
-reports/           final report (PDF)
+reports/           the two reports (PDF)
 ```
 
 ## The versions
@@ -72,6 +79,13 @@ For the unrolling (laptop, one thread), the Sobel gets faster up to d = 8 (×1.6
 `-O2` in VGA), but for the median network the best factor at `-O2` was d = 2
 (2.00 ms down to 1.05 ms in VGA); d = 4 and d = 8 were slower again.
 
+For the cache study (laptop, Cachegrind with the laptop caches), our count by hand was
+very close to the simulation: 614 400 L1 misses per VGA frame predicted for the Sobel in
+column order, 620 813 simulated, and 9 600 against 9 589 in row order. But the misses
+explain little of the time: changing the loop order divides the misses by 65 and only
+saves 11 to 20 % of the Sobel time, and a fused median + Sobel pipeline that removes
+40 % of the misses was slightly slower because it runs more instructions.
+
 More tables are in [`results/README.md`](results/README.md).
 
 ## Build and run
@@ -100,6 +114,29 @@ the time of each frame and the number of pixels that differ from OpenCV, and pri
 
 For the unrolling experiments, use one of the files in `src/experiments/` and add for
 example `-DMEDIAN_UNROLL_FACTOR=2`.
+
+### Cache study (report 2)
+
+These scripts work on one grey frame instead of a video. Put a 640×480 and a 1280×720
+grey PNG in `inputs/VGA.png` and `inputs/HD.png` (our webcam frames are not in the repo).
+Results go to `results_local/`.
+
+```bash
+sudo dnf install valgrind valgrind-devel perf   # for the Cachegrind and perf parts
+
+bash scripts/cache_study.sh build
+bash scripts/cache_study.sh time         # Sobel versions, row step W and W+64, median n=3
+bash scripts/cache_study.sh sweep        # opt4 median, n = 3 ... 31
+bash scripts/cache_study.sh cachegrind   # simulated L1/LL misses
+bash scripts/cache_study.sh perf         # hardware counters
+
+bash scripts/band_fusion.sh time         # full frame vs bands vs fused pipeline
+bash scripts/band_fusion.sh cachegrind
+python3 scripts/summarize_band_fusion.py results_local/band_fusion
+```
+
+`IMAGES`, `OUT`, `WARM` and `RUNS` can be changed from the environment, for example
+`WARM=1 RUNS=5 bash scripts/cache_study.sh time` for a quick test.
 
 ## Note
 

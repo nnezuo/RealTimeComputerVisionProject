@@ -1,0 +1,26 @@
+==84628== Cachegrind, a high-precision tracing profiler
+==84628== Copyright (C) 2002-2025, and GNU GPL'd, by Nicholas Nethercote et al.
+==84628== Using Valgrind-3.27.1 and LibVEX; rerun with -h for copyright info
+==84628== Command: bin/cache_study_report2/optimized4 median 31 results/fedora/capture/VGA/input_gray.png 1 2 0 results/fedora/report2_cache_misses/VGA_median_optimized4_n31_pad0.csv --no-validate
+==84628== 
+--84628-- warning: L3 cache found, using its data for the LL simulation.
+mode=median n=31 image=640x480 warm=1 measured=2 pad=0
+in.step=640 out.step=640 in.base=0x29ab6010 out.base=0x29b02010 in.contiguous=1 out.contiguous=1
+CLOCK_MONOTONIC resolution=0s+1ns
+VALIDATION SKIPPED checksum=27149914 median_ms=574.661 min_ms=570.293 max_ms=574.661
+==84628== 
+==84628== I refs:        603,559,964
+==84628== I1  misses:            142
+==84628== LLi misses:            142
+==84628== I1  miss rate:        0.00%
+==84628== LLi miss rate:        0.00%
+==84628== 
+==84628== D refs:        220,865,227  (218,782,775 rd   + 2,082,452 wr)
+==84628== D1  misses:         30,468  (     15,980 rd   +    14,488 wr)
+==84628== LLd misses:         10,217  (      5,359 rd   +     4,858 wr)
+==84628== D1  miss rate:         0.0% (        0.0%     +       0.7%  )
+==84628== LLd miss rate:         0.0% (        0.0%     +       0.2%  )
+==84628== 
+==84628== LL refs:            30,610  (     16,122 rd   +    14,488 wr)
+==84628== LL misses:          10,359  (      5,501 rd   +     4,858 wr)
+==84628== LL miss rate:          0.0% (        0.0%     +       0.2%  )

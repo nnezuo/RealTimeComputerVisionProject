@@ -1,0 +1,5 @@
+mode=median n=5 image=640x480 warm=10 measured=110 pad=0
+in.step=640 out.step=640 in.base=0x7f22f41bb010 out.base=0x7f22f416f010 in.contiguous=1 out.contiguous=1
+CLOCK_MONOTONIC resolution=0s+1ns
+Validation: mismatching_pixels=0 max_abs_difference=0
+VALIDATION PASS checksum=26963591 median_ms=5.71178 min_ms=5.54523 max_ms=6.03395

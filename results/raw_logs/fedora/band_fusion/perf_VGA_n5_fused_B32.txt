@@ -1,0 +1,12 @@
+# started on Sun Nov 15 08:27:38 2026
+
+
+ Performance counter stats for 'bin/report2_band_fusion fused 5 results/fedora/capture/VGA/input_gray.png 10 110 32 results/fedora/report2_band_fusion/perf_VGA_n5_fused_B32.csv --no-validate' (3 runs):
+
+     5.074.888.628      cycles:u                                                                ( +-  0,85% )
+    12.157.586.766      instructions:u                                                          ( +-  0,00% )
+     3.276.488.052      L1-dcache-loads:u                                                       ( +-  0,05% )
+       259.925.448      L1-dcache-load-misses:u                                                 ( +-  0,29% )
+
+       1,286736199 +- 0,011578972 seconds time elapsed  ( +-  0,90% )
+

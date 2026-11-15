@@ -9,7 +9,8 @@ bin/
 bench_*
 benchmark_*
 
-# local results and videos
+# local results, inputs and videos
+inputs/
 *.avi
 *.mp4
 *.mov

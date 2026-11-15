@@ -1,0 +1,26 @@
+==84689== Cachegrind, a high-precision tracing profiler
+==84689== Copyright (C) 2002-2025, and GNU GPL'd, by Nicholas Nethercote et al.
+==84689== Using Valgrind-3.27.1 and LibVEX; rerun with -h for copyright info
+==84689== Command: bin/cache_study_report2/column_at median 5 results/fedora/capture/HD/input_gray.png 1 2 0 results/fedora/report2_cache_misses/HD_median_column_at_n5_pad0.csv --no-validate
+==84689== 
+--84689-- warning: L3 cache found, using its data for the LL simulation.
+mode=median n=5 image=1280x720 warm=1 measured=2 pad=0
+in.step=1280 out.step=1280 in.base=0x29b4c010 out.base=0x29c2e010 in.contiguous=1 out.contiguous=1
+CLOCK_MONOTONIC resolution=0s+1ns
+VALIDATION SKIPPED checksum=114001118 median_ms=2659.39 min_ms=2630.09 max_ms=2659.39
+==84689== 
+==84689== I refs:        3,826,723,616
+==84689== I1  misses:              133
+==84689== LLi misses:              133
+==84689== I1  miss rate:          0.00%
+==84689== LLi miss rate:          0.00%
+==84689== 
+==84689== D refs:        1,013,203,645  (619,697,434 rd   + 393,506,211 wr)
+==84689== D1  misses:           88,428  (     45,117 rd   +      43,311 wr)
+==84689== LLd misses:           29,420  (     14,982 rd   +      14,438 wr)
+==84689== D1  miss rate:           0.0% (        0.0%     +         0.0%  )
+==84689== LLd miss rate:           0.0% (        0.0%     +         0.0%  )
+==84689== 
+==84689== LL refs:              88,561  (     45,250 rd   +      43,311 wr)
+==84689== LL misses:            29,553  (     15,115 rd   +      14,438 wr)
+==84689== LL miss rate:            0.0% (        0.0%     +         0.0%  )
