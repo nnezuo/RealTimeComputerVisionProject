@@ -1,0 +1,5 @@
+mode=median n=3 image=1280x720 warm=10 measured=110 pad=64
+in.step=1344 out.step=1344 in.base=0x7f1d94f13010 out.base=0x7f1d94e26010 in.contiguous=0 out.contiguous=0
+CLOCK_MONOTONIC resolution=0s+1ns
+Validation: mismatching_pixels=0 max_abs_difference=0
+VALIDATION PASS checksum=113999487 median_ms=16.0891 min_ms=15.7536 max_ms=16.4221

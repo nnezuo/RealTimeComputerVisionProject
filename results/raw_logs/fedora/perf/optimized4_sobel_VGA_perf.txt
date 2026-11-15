@@ -1,0 +1,12 @@
+# started on Sat Nov 14 21:39:38 2026
+
+
+ Performance counter stats for 'bin/cache_study/optimized4 sobel 3 results/fedora/capture/VGA/input_gray.png 10 110 0 results/fedora/cache_counters/optimized4_sobel_VGA.csv --no-validate' (3 runs):
+
+     1.993.586.121      cycles:u                                                                ( +-  1,84% )
+     3.919.252.663      instructions:u                                                          ( +-  0,00% )
+       418.828.806      cache-references:u                                                      ( +-  0,63% )
+        76.624.376      cache-misses:u                                                          ( +-  2,97% )
+
+       0,504149866 +- 0,010597757 seconds time elapsed  ( +-  2,10% )
+

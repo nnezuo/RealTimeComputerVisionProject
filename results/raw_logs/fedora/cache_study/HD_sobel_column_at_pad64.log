@@ -1,0 +1,5 @@
+mode=sobel n=3 image=1280x720 warm=10 measured=110 pad=64
+in.step=1344 out.step=1344 in.base=0x7f75a2431010 out.base=0x7f75a2344010 in.contiguous=0 out.contiguous=0
+CLOCK_MONOTONIC resolution=0s+1ns
+Validation: mismatching_pixels=0 max_abs_difference=0
+VALIDATION PASS checksum=11590596 median_ms=3.35735 min_ms=3.03975 max_ms=3.59402

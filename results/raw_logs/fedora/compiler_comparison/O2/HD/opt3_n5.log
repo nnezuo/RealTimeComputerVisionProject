@@ -1,0 +1,7 @@
+Actual frame size: 1280x720 (requested 1280x720)
+Processed 120 frames; after warm-up: 110
+Median: median=180.0014ms min=166.7218ms max=237.0584ms mean=184.8458ms
+Sobel:  median=0.8636ms min=0.4862ms max=1.1673ms mean=0.8537ms
+Frames with mismatches (all frames): Median=0 Sobel=0
+Files: results/compare_fedora_O2_HD/opt3_n5/frames.csv; input_gray.png; median.png; sobel.png
+VALIDATION PASS

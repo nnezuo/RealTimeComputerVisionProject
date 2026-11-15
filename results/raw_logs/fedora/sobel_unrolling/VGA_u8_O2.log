@@ -1,0 +1,7 @@
+Actual frame size: 640x480 (requested 640x480)
+Processed 120 frames; after warm-up: 110
+Median: median=4.9963ms min=4.7650ms max=5.5028ms mean=5.0334ms
+Sobel:  median=0.5482ms min=0.5297ms max=0.5710ms mean=0.5450ms
+Frames with mismatches (all frames): Median=0 Sobel=0
+Files: results/sobel_unrolling_fedora/VGA_u8_O2/frames.csv; input_gray.png; median.png; sobel.png
+VALIDATION PASS

@@ -1,0 +1,7 @@
+Actual frame size: 640x480 (requested 640x480)
+Processed 120 frames; after warm-up: 110
+Median: median=471.0692ms min=451.8289ms max=487.7727ms mean=469.6624ms
+Sobel:  median=7.0607ms min=6.5674ms max=9.3548ms mean=7.0888ms
+Frames with mismatches (all frames): Median=0 Sobel=0
+Files: results/opt4_arm64_n5_4threads/frames.csv; input_gray.png; median.png; sobel.png
+VALIDATION PASS

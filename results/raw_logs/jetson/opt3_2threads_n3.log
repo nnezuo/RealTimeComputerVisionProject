@@ -1,0 +1,611 @@
+[ WARN:0@0.533] global cap_gstreamer.cpp:1728 open OpenCV | GStreamer warning: Cannot query video position: status=0, value=-1, duration=-1
+Gtk-Message: 15:08:20.354: Failed to load module "pk-gtk-module": 'gtk_module_display_init': /usr/lib/aarch64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so: undefined symbol: gtk_module_display_init
+-------------------------------------
+Median Reference 	 0.635 
+Sobel Reference 	 3.042 
+-------------------------------------
+Median MyCode 	 196.998 
+Sobel MyCode 	 5.374 
+-------------------------------------
+Median Reference 	 0.469 
+Sobel Reference 	 1.752 
+-------------------------------------
+Median MyCode 	 197.948 
+Sobel MyCode 	 5.299 
+-------------------------------------
+Median Reference 	 0.467 
+Sobel Reference 	 1.749 
+-------------------------------------
+Median MyCode 	 198.648 
+Sobel MyCode 	 5.222 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.748 
+-------------------------------------
+Median MyCode 	 199.043 
+Sobel MyCode 	 5.224 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.707 
+-------------------------------------
+Median MyCode 	 199.011 
+Sobel MyCode 	 5.204 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.731 
+-------------------------------------
+Median MyCode 	 199.097 
+Sobel MyCode 	 5.269 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.738 
+-------------------------------------
+Median MyCode 	 199.683 
+Sobel MyCode 	 5.331 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.706 
+-------------------------------------
+Median MyCode 	 199.845 
+Sobel MyCode 	 5.255 
+-------------------------------------
+Median Reference 	 0.443 
+Sobel Reference 	 1.735 
+-------------------------------------
+Median MyCode 	 199.742 
+Sobel MyCode 	 5.349 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.734 
+-------------------------------------
+Median MyCode 	 199.626 
+Sobel MyCode 	 5.937 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.734 
+-------------------------------------
+Median MyCode 	 199.55 
+Sobel MyCode 	 5.281 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.732 
+-------------------------------------
+Median MyCode 	 199.332 
+Sobel MyCode 	 5.293 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.743 
+-------------------------------------
+Median MyCode 	 199.438 
+Sobel MyCode 	 5.28 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.706 
+-------------------------------------
+Median MyCode 	 198.927 
+Sobel MyCode 	 5.212 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.737 
+-------------------------------------
+Median MyCode 	 199.127 
+Sobel MyCode 	 5.242 
+-------------------------------------
+Median Reference 	 0.466 
+Sobel Reference 	 1.763 
+-------------------------------------
+Median MyCode 	 199.414 
+Sobel MyCode 	 5.327 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.737 
+-------------------------------------
+Median MyCode 	 199.135 
+Sobel MyCode 	 5.258 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.739 
+-------------------------------------
+Median MyCode 	 198.788 
+Sobel MyCode 	 5.403 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.717 
+-------------------------------------
+Median MyCode 	 197.479 
+Sobel MyCode 	 6.175 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.71 
+-------------------------------------
+Median MyCode 	 198.277 
+Sobel MyCode 	 5.279 
+-------------------------------------
+Median Reference 	 0.462 
+Sobel Reference 	 1.743 
+-------------------------------------
+Median MyCode 	 197.628 
+Sobel MyCode 	 5.23 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.712 
+-------------------------------------
+Median MyCode 	 205.493 
+Sobel MyCode 	 5.217 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.717 
+-------------------------------------
+Median MyCode 	 199.057 
+Sobel MyCode 	 5.214 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.709 
+-------------------------------------
+Median MyCode 	 198.925 
+Sobel MyCode 	 5.427 
+-------------------------------------
+Median Reference 	 0.448 
+Sobel Reference 	 1.708 
+-------------------------------------
+Median MyCode 	 199.609 
+Sobel MyCode 	 5.232 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.756 
+-------------------------------------
+Median MyCode 	 201.246 
+Sobel MyCode 	 5.336 
+-------------------------------------
+Median Reference 	 0.45 
+Sobel Reference 	 1.735 
+-------------------------------------
+Median MyCode 	 197.892 
+Sobel MyCode 	 5.232 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.713 
+-------------------------------------
+Median MyCode 	 197.32 
+Sobel MyCode 	 5.252 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.712 
+-------------------------------------
+Median MyCode 	 199.563 
+Sobel MyCode 	 5.691 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.711 
+-------------------------------------
+Median MyCode 	 199.082 
+Sobel MyCode 	 5.275 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.711 
+-------------------------------------
+Median MyCode 	 200.01 
+Sobel MyCode 	 5.224 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.757 
+-------------------------------------
+Median MyCode 	 197.188 
+Sobel MyCode 	 5.341 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.738 
+-------------------------------------
+Median MyCode 	 198.029 
+Sobel MyCode 	 5.382 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.708 
+-------------------------------------
+Median MyCode 	 199 
+Sobel MyCode 	 5.578 
+-------------------------------------
+Median Reference 	 0.449 
+Sobel Reference 	 1.753 
+-------------------------------------
+Median MyCode 	 198.126 
+Sobel MyCode 	 5.265 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.781 
+-------------------------------------
+Median MyCode 	 202.142 
+Sobel MyCode 	 5.21 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.748 
+-------------------------------------
+Median MyCode 	 201.568 
+Sobel MyCode 	 5.235 
+-------------------------------------
+Median Reference 	 0.447 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 200.784 
+Sobel MyCode 	 5.221 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.718 
+-------------------------------------
+Median MyCode 	 201.136 
+Sobel MyCode 	 5.329 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.722 
+-------------------------------------
+Median MyCode 	 200.239 
+Sobel MyCode 	 5.605 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.744 
+-------------------------------------
+Median MyCode 	 199.866 
+Sobel MyCode 	 5.304 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.751 
+-------------------------------------
+Median MyCode 	 199.91 
+Sobel MyCode 	 5.424 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.774 
+-------------------------------------
+Median MyCode 	 202.747 
+Sobel MyCode 	 5.224 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.779 
+-------------------------------------
+Median MyCode 	 200.136 
+Sobel MyCode 	 5.173 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.755 
+-------------------------------------
+Median MyCode 	 201.386 
+Sobel MyCode 	 5.28 
+-------------------------------------
+Median Reference 	 0.447 
+Sobel Reference 	 1.753 
+-------------------------------------
+Median MyCode 	 197.599 
+Sobel MyCode 	 5.268 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.755 
+-------------------------------------
+Median MyCode 	 197.089 
+Sobel MyCode 	 5.258 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.753 
+-------------------------------------
+Median MyCode 	 197.243 
+Sobel MyCode 	 5.279 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.762 
+-------------------------------------
+Median MyCode 	 197.222 
+Sobel MyCode 	 5.222 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.73 
+-------------------------------------
+Median MyCode 	 197.56 
+Sobel MyCode 	 5.219 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.717 
+-------------------------------------
+Median MyCode 	 197.729 
+Sobel MyCode 	 5.237 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.753 
+-------------------------------------
+Median MyCode 	 197.098 
+Sobel MyCode 	 5.59 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.71 
+-------------------------------------
+Median MyCode 	 197.423 
+Sobel MyCode 	 5.281 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.747 
+-------------------------------------
+Median MyCode 	 197.172 
+Sobel MyCode 	 5.207 
+-------------------------------------
+Median Reference 	 0.449 
+Sobel Reference 	 1.76 
+-------------------------------------
+Median MyCode 	 197.854 
+Sobel MyCode 	 5.194 
+-------------------------------------
+Median Reference 	 0.47 
+Sobel Reference 	 1.74 
+-------------------------------------
+Median MyCode 	 197.082 
+Sobel MyCode 	 5.18 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.715 
+-------------------------------------
+Median MyCode 	 197.477 
+Sobel MyCode 	 5.165 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.749 
+-------------------------------------
+Median MyCode 	 199.281 
+Sobel MyCode 	 5.165 
+-------------------------------------
+Median Reference 	 0.47 
+Sobel Reference 	 1.739 
+-------------------------------------
+Median MyCode 	 197.96 
+Sobel MyCode 	 5.178 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 198.309 
+Sobel MyCode 	 5.168 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.808 
+-------------------------------------
+Median MyCode 	 201.933 
+Sobel MyCode 	 5.193 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.728 
+-------------------------------------
+Median MyCode 	 198.425 
+Sobel MyCode 	 5.184 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.715 
+-------------------------------------
+Median MyCode 	 197.886 
+Sobel MyCode 	 5.176 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.751 
+-------------------------------------
+Median MyCode 	 199.832 
+Sobel MyCode 	 5.182 
+-------------------------------------
+Median Reference 	 0.463 
+Sobel Reference 	 1.729 
+-------------------------------------
+Median MyCode 	 199.351 
+Sobel MyCode 	 5.168 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.76 
+-------------------------------------
+Median MyCode 	 199.545 
+Sobel MyCode 	 5.167 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.724 
+-------------------------------------
+Median MyCode 	 200.293 
+Sobel MyCode 	 5.182 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 199.33 
+Sobel MyCode 	 5.169 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.717 
+-------------------------------------
+Median MyCode 	 197.399 
+Sobel MyCode 	 5.184 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.715 
+-------------------------------------
+Median MyCode 	 198.644 
+Sobel MyCode 	 5.238 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.777 
+-------------------------------------
+Median MyCode 	 203.917 
+Sobel MyCode 	 5.246 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.71 
+-------------------------------------
+Median MyCode 	 205.713 
+Sobel MyCode 	 5.219 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.709 
+-------------------------------------
+Median MyCode 	 198.79 
+Sobel MyCode 	 5.188 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.709 
+-------------------------------------
+Median MyCode 	 197.471 
+Sobel MyCode 	 5.236 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.71 
+-------------------------------------
+Median MyCode 	 205.441 
+Sobel MyCode 	 5.255 
+-------------------------------------
+Median Reference 	 0.467 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 199.475 
+Sobel MyCode 	 5.182 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 199.813 
+Sobel MyCode 	 5.589 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.75 
+-------------------------------------
+Median MyCode 	 199.988 
+Sobel MyCode 	 5.369 
+-------------------------------------
+Median Reference 	 0.447 
+Sobel Reference 	 1.748 
+-------------------------------------
+Median MyCode 	 200.856 
+Sobel MyCode 	 5.436 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.714 
+-------------------------------------
+Median MyCode 	 200.623 
+Sobel MyCode 	 5.201 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 200.559 
+Sobel MyCode 	 5.523 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.742 
+-------------------------------------
+Median MyCode 	 200.684 
+Sobel MyCode 	 5.37 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.717 
+-------------------------------------
+Median MyCode 	 200.548 
+Sobel MyCode 	 5.194 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.742 
+-------------------------------------
+Median MyCode 	 200.232 
+Sobel MyCode 	 5.55 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.709 
+-------------------------------------
+Median MyCode 	 200.581 
+Sobel MyCode 	 5.551 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 200.433 
+Sobel MyCode 	 5.167 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.717 
+-------------------------------------
+Median MyCode 	 200.067 
+Sobel MyCode 	 5.596 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.763 
+-------------------------------------
+Median MyCode 	 199.86 
+Sobel MyCode 	 5.316 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.75 
+-------------------------------------
+Median MyCode 	 198.39 
+Sobel MyCode 	 5.519 
+-------------------------------------
+Median Reference 	 0.45 
+Sobel Reference 	 1.765 
+-------------------------------------
+Median MyCode 	 199.59 
+Sobel MyCode 	 5.532 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.728 
+-------------------------------------
+Median MyCode 	 199.191 
+Sobel MyCode 	 5.209 
+-------------------------------------
+Median Reference 	 0.446 
+Sobel Reference 	 1.741 
+-------------------------------------
+Median MyCode 	 197.899 
+Sobel MyCode 	 5.183 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.723 
+-------------------------------------
+Median MyCode 	 197.902 
+Sobel MyCode 	 5.169 
+-------------------------------------
+Median Reference 	 0.462 
+Sobel Reference 	 1.716 
+-------------------------------------
+Median MyCode 	 198.216 
+Sobel MyCode 	 5.193 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.708 
+-------------------------------------
+Median MyCode 	 197.969 
+Sobel MyCode 	 5.288 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.712 
+-------------------------------------
+Median MyCode 	 198.483 
+Sobel MyCode 	 5.559 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.723 
+-------------------------------------
+Median MyCode 	 198.607 
+Sobel MyCode 	 5.182 
+-------------------------------------
+Median Reference 	 0.444 
+Sobel Reference 	 1.736 
+-------------------------------------
+Median MyCode 	 197.723 
+Sobel MyCode 	 5.595 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.75 
+-------------------------------------
+Median MyCode 	 197.882 
+Sobel MyCode 	 5.177 
+-------------------------------------
+Median Reference 	 0.445 
+Sobel Reference 	 1.72 
+-------------------------------------
+Median MyCode 	 198.982 
+Sobel MyCode 	 5.186 
+========================================
+ Mean meadian time referebce  0.448960 ms
+ Mean sobel time referebce  1.746460 ms
+ Mean median time mycode 199.298110 ms
+ Mean sobel time mycode 5.305490 ms
+
+ Speedup median 0.002253 ms
+ Speedup sobel 0.329180 ms
+------------------
